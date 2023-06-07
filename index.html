@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURTITODO</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav_container">
+            <h1 class="nav_title">SURTITODO</h1>
+
+            <a href="#menu" class="nav_menu">
+                <img src="./assets/menu.svg" alt="menu" class="nav_icon">
+            </a>
+
+            <a href="#" class="nav_menu nav_menu--second">
+                <img src="./assets/close.svg" alt="close" class="nav_icon">
+            </a>
+
+            <ul class="dropdown" id="menu">
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/house.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Inicio</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="dropdown" id="menu">
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/house.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Proyectos</span>
+                        <img src="./assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Proyecto 1</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Proyecto 2</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Proyecto 3</a>
+                            </li>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+</body>
+</html>
