@@ -88,6 +88,13 @@
             <img src="./img/img_main_mobile.jpg" alt="img_main">
         </figure>
     </main>
+
+    <p>El ancho de la pantalla es: <span id="ancho-pantalla"></span></p>
+
+    <script>
+        const anchoPantalla = window.innerWidth;
+        document.getElementById("ancho-pantalla").textContent = `${anchoPantalla}px`;
+    </script>
 </body>
 
 </html>
