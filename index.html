@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SURTITODO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
     <nav class="nav">
         <div class="nav_container">
@@ -26,9 +34,29 @@
                         <span class="dropdown_span">Inicio</span>
                     </a>
                 </li>
-            </ul>
-            
-            <ul class="dropdown" id="menu">
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/house.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Proyectos</span>
+                        <img src="./assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Proyecto 1</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Proyecto 2</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Proyecto 3</a>
+                            </li>
+                    </div>
+                </li>
+
                 <li class="dropdown_list">
                     <a href="#" class="dropdown_link">
                         <img src="./assets/house.svg" alt="house" class="dropdown_icon">
@@ -52,7 +80,14 @@
                 </li>
             </ul>
         </div>
-        
+
     </nav>
+
+    <main class="main-container">
+        <figure class="imagen-principal-mobil">
+            <img src="./img/img_main_mobile.jpg" alt="img_main">
+        </figure>
+    </main>
 </body>
+
 </html>
