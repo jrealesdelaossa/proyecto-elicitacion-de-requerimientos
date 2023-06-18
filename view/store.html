@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURTITODO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="https://kit.fontawesome.com/98cbfc265a.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        :root {
+            --color-primary: #b31312;
+            --color-primary-dark: #ba000d;
+            --color-primary-light: #ff7961;
+            --color-secondary: #ea906c;
+            --white: #fff;
+            --white-alt: #eee2de;
+            --black: #000;
+            --black-alt: #2b2a4c;
+            --menu-selected: #283038;
+        }
+
+        body {
+
+            font-family: Rubik, sans-serif;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin-bottom: 80px;
+        }
+
+        footer {
+            width: 100vw;
+            height: 7vh;
+            background-color: var(--black-alt);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+
+        }
+
+        span {
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .contenedor-productos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .producto {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            width: 300px;
+            height: 370px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease-in-out;
+            background-color: white;
+        }
+
+        .producto img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px 10px 0px 0px;
+            margin-top: 0;
+            object-fit: cover;
+        }
+
+        .text-product {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .txt-compra {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+        }
+
+        .btn-compra {
+            font-size: 1.5em;
+            display: grid;
+            place-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: #2b2a4c;
+            cursor: pointer;
+        }
+
+        .txt-compra p {
+            color: #474E68;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav_container">
+            <h1 class="nav_title">SURTITODO</h1>
+
+            <a href="#menu" class="nav_menu">
+                <img src="../assets/menu.svg" alt="menu" class="nav_icon">
+            </a>
+
+            <a href="#" class="nav_menu nav_menu--second">
+                <img src="../assets/close.svg" alt="close" class="nav_icon">
+            </a>
+
+            <ul class="dropdown" id="menu">
+                <li class="dropdown_list">
+                    <a href="./home.html" class="dropdown_link">
+                        <img src="../assets/house.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/projects.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Productos</span>
+                        <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="./store.html" class="dropdown_anchor">Comprar</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="./cart.html" class="dropdown_anchor">Carrito</a>
+                            </li>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/email.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Contacto</span>
+                        <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Ubicación</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">PQRS</a>
+                            </li>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/help.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Sobre nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="main-container">
+
+
+        <!-- contenedor de productos -->
+        <div class="contenedor-productos">
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>$50.000</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>$ 50.000</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../assets/tool.jpg" alt="producto">
+
+                <div class="text-product">
+                    <div class="txt-compra">
+                        <h3>Producto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    </div>
+                    <span class="btn-compra">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span />
+                </div>
+            </div>
+    </main>
+
+
+
+    <footer>
+        <span class=" icon">
+            <i class="fa-brands fa-facebook"></i>
+
+        </span>
+        <span>
+            <i class="fa-brands fa-instagram"></i>
+        </span>
+
+        <span>
+            <i class="fa-brands fa-twitter"></i>
+        </span>
+    </footer>
+
+    <script>
+        const anchoPantalla = window.innerWidth;
+        document.getElementById("ancho-pantalla").textContent = `${anchoPantalla}px`;
+    </script>
+</body>
+
+</html>

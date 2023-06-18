@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURTITODO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="https://kit.fontawesome.com/98cbfc265a.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            font-family: Rubik, sans-serif;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin-bottom: 80px;
+        }
+
+        footer {
+            width: 100vw;
+            height: 7vh;
+            background-color: var(--black-alt);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+
+        }
+
+        span {
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .text-main {
+            margin: 20px 40px;
+            color: var(--black-alt);
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        main h1 {
+            font-size: 2em;
+            color: var(--black-alt);
+
+        }
+
+        main h2 {
+            font-size: 1.5em;
+            color: var(--black-alt);
+        }
+
+        main p {
+            font-size: 1.3em;
+            color: var(--black-alt);
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav_container">
+            <h1 class="nav_title">SURTITODO</h1>
+
+            <a href="#menu" class="nav_menu">
+                <img src="../assets/menu.svg" alt="menu" class="nav_icon">
+            </a>
+
+            <a href="#" class="nav_menu nav_menu--second">
+                <img src="../assets/close.svg" alt="close" class="nav_icon">
+            </a>
+
+            <ul class="dropdown" id="menu">
+                <li class="dropdown_list">
+                    <a href="./home.html" class="dropdown_link">
+                        <img src="../assets/house.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/projects.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Productos</span>
+                        <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="./store.html" class="dropdown_anchor">Comprar</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="./cart.html" class="dropdown_anchor">Carrito</a>
+                            </li>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/email.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Contacto</span>
+                        <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Ubicación</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">PQRS</a>
+                            </li>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/help.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Sobre nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="main-container">
+        <figure class="imagen-principal-mobil">
+            <img src="../img/img_main_mobile.jpg" alt="img_main">
+        </figure>
+
+        <div class="text-main">
+            <h1>¡Bienvenido a Surtitodo, tu tienda de ferretería confiable y completa!</h1>
+
+            <h2>Encuentra todo lo que necesitas para tus proyectos en un solo lugar.</h2>
+
+            <p>En Surtitodo nos enorgullece ofrecerte una amplia selección de productos de ferretería de la más alta
+                calidad. Ya sea que estés realizando reparaciones en casa, emprendiendo un proyecto de construcción o
+                buscando herramientas para tu negocio, estamos aquí para ayudarte.</p>
+
+            <p>Nuestro compromiso es brindarte una experiencia de compra excepcional. Contamos con un equipo de expertos
+                en
+                ferretería dispuestos a asesorarte y responder todas tus preguntas. Valoramos la satisfacción del
+                cliente y
+                nos esforzamos por superar tus expectativas en cada visita.</p>
+
+            <p>Visítanos hoy mismo y descubre por qué Surtitodo es tu mejor opción para todas tus necesidades de
+                ferretería.
+                ¡Estamos ansiosos por ayudarte a hacer realidad tus proyectos!</p>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <span class="icon">
+            <i class="fa-brands fa-facebook"></i>
+
+        </span>
+        <span>
+            <i class="fa-brands fa-instagram"></i>
+        </span>
+
+        <span>
+            <i class="fa-brands fa-twitter"></i>
+        </span>
+    </footer>
+
+    <script>
+        const anchoPantalla = window.innerWidth;
+        document.getElementById("ancho-pantalla").textContent = `${anchoPantalla}px`;
+    </script>
+</body>
+
+</html>

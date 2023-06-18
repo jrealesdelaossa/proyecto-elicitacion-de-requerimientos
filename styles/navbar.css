@@ -54,6 +54,7 @@ body {
     color: var(--white);
     grid-area: title;
     font-weight: 700;
+    margin-left: 24px;
   }
 
   .nav_menu {

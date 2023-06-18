@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURTITODO | carrrito</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="https://kit.fontawesome.com/98cbfc265a.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            font-family: Rubik, sans-serif;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin-bottom: 80px;
+        }
+
+        footer {
+            width: 100vw;
+            height: 7vh;
+            background-color: var(--black-alt);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+
+        }
+
+        span {
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .text-main {
+            margin: 20px 40px;
+            color: var(--black-alt);
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        main h1 {
+            font-size: 2em;
+            color: var(--black-alt);
+
+        }
+
+        main h2 {
+            font-size: 1.5em;
+            color: var(--black-alt);
+        }
+
+        main p {
+            font-size: 1.3em;
+            color: var(--black-alt);
+        }
+
+        .listado-productos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin-bottom: 10px;
+        }
+
+        .listado-productos h1 {
+            font-size: 2em;
+            color: var(--black-alt);
+            margin-top: 20px;
+        }
+
+        .listado-productos h2 {
+            font-size: 1.5em;
+            color: var(--black-alt);
+        }
+
+        .productos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .producto {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            margin-bottom: 20px;
+            width: 90vw;
+            background: white;
+            border-radius: 20px;
+        }
+
+        .producto img {
+            width: 100px;
+            height: 120px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .cantidad {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--black-alt);
+            border-radius: 20px;
+            height: 120px;
+        }
+
+        .cantidad p {
+            color: var(--white);
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+        .cantidad button {
+            width: 40px;
+            height: 40px;
+            background: var(--black-alt);
+            border: none;
+            border-radius: 20px;
+            color: var(--white);
+            font-size: 2em;
+        }
+
+        .formulario-pago {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+            margin-bottom: 80px;
+            background-color: var(--black-alt);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            color: white;
+        }
+
+        .formulario-pago label {
+            font-size: 1.5em;
+            color: var(--white);
+        }
+
+        .formulario-pago input {
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            font-size: 1.5em;
+            outline: none;
+        }
+
+        .metodo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .metodo label {
+            font-size: 1.5em;
+            color: var(--white);
+        }
+
+        .metodo input {
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            font-size: 1.5em;
+            width: 20px;
+            margin-top: 20px;
+            margin-right: 8px;
+            color: var(--white);
+        }
+
+        .met {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 50px;
+            color: white;
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btns button {
+            width: 45%;
+            height: 50px;
+            background-color: var(--white);
+            color: var(--black-alt);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav_container">
+            <h1 class="nav_title">SURTITODO</h1>
+
+            <a href="#menu" class="nav_menu">
+                <img src="../assets/menu.svg" alt="menu" class="nav_icon">
+            </a>
+
+            <a href="#" class="nav_menu nav_menu--second">
+                <img src="../assets/close.svg" alt="close" class="nav_icon">
+            </a>
+
+            <ul class="dropdown" id="menu">
+                <li class="dropdown_list">
+                    <a href="./home.html" class="dropdown_link">
+                        <img src="../assets/house.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/projects.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Productos</span>
+                        <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="./store.html" class="dropdown_anchor">Comprar</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Carrito</a>
+                            </li>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/email.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Contacto</span>
+                        <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Ubicación</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">PQRS</a>
+                            </li>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="../assets/help.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Sobre nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="main-container">
+        <!-- listados de productos seleccionados -->
+        <div class="listado-productos">
+            <h1>Carrito de compras</h1>
+            <div class="productos">
+                <div class="producto">
+                    <img src="../assets/tool.jpg" alt="leche">
+                    <div class="info-producto">
+                        <h2>Kit de llaves</h2>
+                        <p>$50.000</p>
+                    </div>
+                    <div class="cantidad">
+                        <button>-</button>
+                        <p>3</p>
+                        <button>+</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="../assets/hammer.jpg" alt="leche">
+                    <div class="info-producto">
+                        <h2>Martillo Break</h2>
+                        <p>$22.000</p>
+                    </div>
+                    <div class="cantidad">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- formulario de datos de envio -->
+        <div class="formulario-pago">
+            <form action="/">
+                <label for="name">Nombre del comprador</label>
+                <input type="text" name="name" id="name" placeholder="Jhon Dalt">
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email" placeholder="email@email.com">
+
+                <label for="phone">Teléfono</label>
+                <input type="tel" name="phone" id="phone" placeholder="123456789">
+
+                <label for="address">Dirección</label>
+                <input type="text" name="address" id="address" placeholder="cll 12 #3-12">
+
+                <label for="metodo-pago">Método de pago</label>
+                <div class="metodo">
+                    <div class="met">
+                        <input type="radio" name="medio-pago" id="efectivo">
+                        <label for="efectivo"><i class="fa-solid fa-money-bill"></i> Efectivo</label>
+                    </div>
+
+                    <div class="met">
+                        <input type="radio" name="medio-pago" id="tarjeta">
+                        <label for="tarjeta"><i class="fa-solid fa-credit-card"></i> Tarjeta credito/debito</label>
+                    </div>
+
+                    <div class="met">
+                        <input type="radio" name="medio-pago" id="Paypal">
+                        <label for="Paypal"><i class="fa-brands fa-paypal"></i> Paypal</label>
+                    </div>
+
+                    <div class="met">
+                        <input type="radio" name="medio-pago" id="Bitcoin">
+                        <label for="Bitcoin"><i class="fa-brands fa-bitcoin"></i> Bitcoin</label>
+                    </div>
+                </div>
+
+            </form>
+            <div class="btns">
+                <button>Cancelar <i class="fa-solid fa-xmark"></i></button>
+                <button>Continuar <i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <span class="icon">
+            <i class="fa-brands fa-facebook"></i>
+
+        </span>
+        <span>
+            <i class="fa-brands fa-instagram"></i>
+        </span>
+
+        <span>
+            <i class="fa-brands fa-twitter"></i>
+        </span>
+    </footer>
+
+    <script>
+        const anchoPantalla = window.innerWidth;
+        document.getElementById("ancho-pantalla").textContent = `${anchoPantalla}px`;
+    </script>
+</body>
+
+</html>
