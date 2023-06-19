@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SURTITODO</title>
+    <title>SURTITODO | Productos</title>
+
+    <!-- favicon de la página -->
+    <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +78,7 @@
             justify-content: space-between;
             align-items: start;
             width: 300px;
-            height: 370px;
+            height: auto;
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
@@ -86,9 +89,19 @@
         .producto img {
             width: 100%;
             height: 300px;
+            max-height: 300px;
             border-radius: 10px 10px 0px 0px;
             margin-top: 0;
             object-fit: cover;
+        }
+
+        .description-product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            width: 100%;
+            padding: 20px 20px;
         }
 
         .text-product {
@@ -97,7 +110,7 @@
             justify-content: space-around;
             align-items: center;
             width: 100%;
-            padding: 10px;
+            padding: 10px 20px 0 20px;
         }
 
         .txt-compra {
@@ -128,7 +141,7 @@
 <body>
     <nav class="nav">
         <div class="nav_container">
-            <h1 class="nav_title">SURTITODO</h1>
+            <h1 class="nav_title">PRODUCTOS</h1>
 
             <a href="#menu" class="nav_menu">
                 <img src="../assets/menu.svg" alt="menu" class="nav_icon">
@@ -141,14 +154,14 @@
             <ul class="dropdown" id="menu">
                 <li class="dropdown_list">
                     <a href="./home.html" class="dropdown_link">
-                        <img src="../assets/house.svg" alt="house" class="dropdown_icon">
+                        <img src="../assets/house-solid.svg" alt="house" class="dropdown_icon">
                         <span class="dropdown_span">Inicio</span>
                     </a>
                 </li>
 
                 <li class="dropdown_list">
                     <a href="#" class="dropdown_link">
-                        <img src="../assets/projects.svg" alt="house" class="dropdown_icon">
+                        <img src="../assets/cart-shopping-solid.svg" alt="house" class="dropdown_icon">
                         <span class="dropdown_span">Productos</span>
                         <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
                         <input type="checkbox" class="dropdown_check">
@@ -167,7 +180,7 @@
 
                 <li class="dropdown_list">
                     <a href="#" class="dropdown_link">
-                        <img src="../assets/email.svg" alt="house" class="dropdown_icon">
+                        <img src="../assets/address-card-solid.svg" alt="house" class="dropdown_icon">
                         <span class="dropdown_span">Contacto</span>
                         <img src="../assets/down.svg" alt="down_arrow" class="dropdown_arrow">
                         <input type="checkbox" class="dropdown_check">
@@ -176,18 +189,18 @@
                     <div class="dropdown_content">
                         <ul class="dropdown_sub">
                             <li class="dropdown_li">
-                                <a href="#" class="dropdown_anchor">Ubicación</a>
+                                <a href="./locate.html" class="dropdown_anchor">Ubicación</a>
                             </li>
                             <li class="dropdown_li">
-                                <a href="#" class="dropdown_anchor">PQRS</a>
+                                <a href="./pqrs.html" class="dropdown_anchor">PQRS</a>
                             </li>
                     </div>
                 </li>
 
                 <li class="dropdown_list">
-                    <a href="#" class="dropdown_link">
-                        <img src="../assets/help.svg" alt="house" class="dropdown_icon">
-                        <span class="dropdown_span">Sobre nosotros</span>
+                    <a href="./user.html" class="dropdown_link">
+                        <img src="../assets/user-solid.svg" alt="house" class="dropdown_icon">
+                        <span class="dropdown_span">Usuraio</span>
                     </a>
                 </li>
             </ul>
@@ -202,7 +215,6 @@
         <div class="contenedor-productos">
             <div class="producto">
                 <img src="../assets/tool.jpg" alt="producto">
-
                 <div class="text-product">
                     <div class="txt-compra">
                         <h3>Kit de llaves</h3>
@@ -212,6 +224,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">Este completo conjunto de llaves está diseñado para adaptarse a una
+                    amplia gama de
+                    aplicaciones, desde trabajos en el hogar hasta proyectos más exigentes.</p>
+
             </div>
 
             <div class="producto">
@@ -226,7 +243,13 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Ya sea que estés realizando reparaciones en casa, construyendo muebles o trabajando en proyectos de
+                    carpintería, este martillo será tu mejor aliado, brindándote potencia y precisión en cada golpe.
+                </p>
             </div>
+
             <div class="producto">
                 <img src="../assets/cinta.jpg" alt="producto">
 
@@ -239,7 +262,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+                <p class="description-product">
+                    Desde tareas domésticas hasta trabajos profesionales, estas cintas se adaptarán a tus necesidades.
+                </p>
             </div>
+
             <div class="producto">
                 <img src="../assets/estuco.jpg" alt="producto">
 
@@ -252,6 +279,12 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+
+                    Diseñado para brindar durabilidad, resistencia y un aspecto estético impresionante, este estuco se
+                    convertirá en el aliado indispensable para obtener resultados profesionales.
+                </p>
             </div>
             <div class="producto">
                 <img src="../assets/herramientas.jpg" alt="producto">
@@ -265,6 +298,12 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Este kit está diseñado para brindarte una amplia gama de herramientas esenciales, garantizando que
+                    tengas todo lo necesario para enfrentar cualquier proyecto, ya sea en el hogar, en el garaje o en el
+                    lugar de trabajo.
+                </p>
             </div>
             <div class="producto">
                 <img src="../assets/palas.jpg" alt="producto">
@@ -278,6 +317,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Diseñadas para ofrecer comodidad, durabilidad y un rendimiento excepcional, estas palas te ayudarán
+                    a obtener resultados de calidad profesional.
+                </p>
             </div>
             <div class="producto">
                 <img src="../assets/pintura.jpg" alt="producto">
@@ -291,6 +335,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Diseñadas para ofrecer colores vibrantes, una cobertura excepcional y una durabilidad duradera,
+                    nuestras pinturas te permitirán transformar tus espacios y lograr resultados profesionales.
+                </p>
             </div>
             <div class="producto">
                 <img src="../assets/pulidora.jpg" alt="producto">
@@ -304,6 +353,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Diseñada para ofrecer un rendimiento de calidad profesional, esta pulidora te permitirá obtener
+                    resultados de alto nivel en proyectos de automoción, hogar y más.
+                </p>
             </div>
             <div class="producto">
                 <img src="../assets/rodillo.jpg" alt="producto">
@@ -317,6 +371,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Diseñado para brindar comodidad, eficiencia y resultados de calidad profesional, este rodillo te
+                    ayudará a transformar tus espacios de manera rápida y fácil.
+                </p>
             </div>
             <div class="producto">
                 <img src="../assets/tornillos.jpg" alt="producto">
@@ -330,6 +389,11 @@
                         <i class="fa-solid fa-cart-plus"></i>
                         <span />
                 </div>
+
+                <p class="description-product">
+                    Diseñado para brindar comodidad, eficiencia y resultados de calidad profesional, este rodillo te
+                    ayudará a transformar tus espacios de manera rápida y fácil.
+                </p>
             </div>
     </main>
 
