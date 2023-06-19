@@ -147,6 +147,29 @@
             font-size: 2em;
         }
 
+        .total-pagar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 90vw;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            background-color: var(--white);
+            border-radius: 20px;
+            height: 80px;
+        }
+
+        .total-pagar h1 {
+            font-size: 2em;
+            color: var(--black-alt);
+        }
+
+        .total-pagar p {
+            font-size: 2em;
+            color: var(--black-alt);
+        }
+
         .formulario-pago {
             display: flex;
             flex-direction: column;
@@ -185,6 +208,7 @@
         .metodo label {
             font-size: 1.5em;
             color: var(--white);
+            width: 100%;
         }
 
         .metodo input {
@@ -332,6 +356,11 @@
             </div>
         </div>
 
+        <div class="total-pagar">
+            <h2>Total a pagar</h2>
+            <p>$172.000</p>
+        </div>
+
         <!-- formulario de datos de envio -->
         <div class="formulario-pago">
             <form action="/">
@@ -372,8 +401,8 @@
 
             </form>
             <div class="btns">
-                <button>Cancelar <i class="fa-solid fa-xmark"></i></button>
-                <button>Continuar <i class="fa-solid fa-circle-arrow-right"></i></button>
+                <button><i class="fa-solid fa-xmark"></i></button>
+                <button><i class="fa-solid fa-circle-arrow-right"></i></button>
             </div>
         </div>
     </main>
