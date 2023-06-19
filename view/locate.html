@@ -37,6 +37,10 @@
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         }
 
+        .gps-desktop {
+            display: none;
+        }
+
         footer {
             width: 100vw;
             height: 7vh;
@@ -77,6 +81,21 @@
         main p {
             font-size: 1.3em;
             color: var(--black-alt);
+        }
+
+        @media (min-width: 720px) {
+            .gps-mobil {
+                display: none;
+            }
+
+            .gps-desktop {
+                display: contents;
+                width: 50vw;
+            }
+
+            .gps-desktop img {
+                width: 100%;
+            }
         }
     </style>
 
@@ -155,10 +174,14 @@
     <main class="main-container">
 
         <div class="text-main">
-            <h1>Puede ubicarno en la siguiente dirección</h1>
+            <h1>Puede ubicarnos en la siguiente dirección</h1>
 
             <figure class="gps-mobil">
                 <img src="../assets/gps1.png" alt="img_main">
+            </figure>
+
+            <figure class="gps-desktop">
+                <img src="../assets/gps2.png" alt="img_main">
             </figure>
 
             <p>Calle 39 #12-90 Local 301</p>

@@ -134,6 +134,19 @@
         .txt-compra p {
             color: #474E68;
         }
+
+        @media (min-width: 720px) {
+            .contenedor-productos {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                max-width: 90vw;
+            }
+
+            .producto {
+                height: 540px;
+            }
+        }
     </style>
 
 </head>

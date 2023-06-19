@@ -251,6 +251,56 @@
             border-radius: 10px;
             font-size: 1.5em;
         }
+
+        @media (min-width: 720px) {
+            .listado-productos {
+                width: 50vw;
+                min-width: 600px;
+            }
+
+            .productos {
+                width: 100%;
+            }
+
+            .producto {
+                width: 100%;
+            }
+
+            .cantidad {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background: var(--black-alt);
+                border-radius: 20px;
+                height: 120px;
+                width: 120px;
+            }
+
+            .producto img {
+                width: 260px;
+            }
+
+            .cantidad p {
+                color: var(--white);
+                font-size: 1.5em;
+                margin: 0 10px;
+            }
+
+            .cantidad button {
+                cursor: pointer;
+            }
+
+            .total-pagar {
+                width: 50vw;
+                min-width: 600px;
+            }
+
+            .formulario-pago {
+                width: 50vw;
+                min-width: 600px;
+            }
+        }
     </style>
 
 </head>
