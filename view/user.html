@@ -39,7 +39,7 @@
             justify-content: center;
             align-items: center;
             width: 90vw;
-            margin: 20px 20px;
+            margin: 20px auto;
         }
 
         footer {
@@ -80,10 +80,86 @@
             gap: 12px;
         }
 
+        .user-card__title {
+            color: var(--color-secondary);
+        }
+
         .user-card__body .user-card__info {
             display: flex;
             flex-direction: column;
             gap: 8px;
+        }
+
+        .user-options {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            width: 100%;
+            background-color: var(--black-alt);
+            border-radius: 20px;
+            padding: 20px;
+            color: var(--white);
+            margin-top: 20px;
+
+        }
+
+        .user-options hr {
+            width: 100%;
+            border: 1px solid var(--white-alt);
+            margin: 12px 0;
+        }
+
+        .option {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .option span {
+            font-size: 2em;
+            color: var(--color-secondary);
+        }
+
+        .option p {
+            font-size: 1.5em;
+            color: var(--color-secondary);
+        }
+
+        @media (min-width: 1200px) {
+            .main-container {
+                width: 50vw;
+                max-width: 50vw;
+            }
+
+            .user-card {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .user-card__header {
+                justify-content: center;
+            }
+
+        }
+
+        @media (min-width: 720px) {
+            .main-container {
+                width: 70vw;
+            }
+
+            .user-card {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .user-card__header {
+                justify-content: center;
+            }
         }
     </style>
 
@@ -174,7 +250,30 @@
 
                 </div>
             </div>
+        </div>
 
+        <div class="user-options">
+            <div class="option">
+                <span>
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+                <p>Historial de compras</p>
+            </div>
+            <hr>
+            <div class="option">
+                <span>
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                <p>Configuración de cuenta</p>
+            </div>
+            <hr>
+            <div class="option">
+                <span>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </span>
+                <p>Salir</p>
+            </div>
+        </div>
     </main>
 
 

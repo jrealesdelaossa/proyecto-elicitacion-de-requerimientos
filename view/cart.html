@@ -19,6 +19,7 @@
     <style>
         body {
             font-family: Rubik, sans-serif;
+            width: 100vw;
         }
 
         .main-container {
@@ -250,12 +251,51 @@
             border: none;
             border-radius: 10px;
             font-size: 1.5em;
+            cursor: pointer;
         }
 
-        @media (min-width: 720px) {
+        @media (max-width: 1200px) {
+            .main-container {
+                display: flex;
+                flex-direction: column;
+            }
+
             .listado-productos {
-                width: 50vw;
-                min-width: 600px;
+                width: 100%;
+                min-width: 560px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .formulario-pago {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .main-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: start;
+                width: 90vw;
+                min-width: 60vw;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                gap: 40px;
+            }
+
+            .listado-productos {
+                width: 100%;
+                min-width: 560px;
             }
 
             .productos {
@@ -292,8 +332,8 @@
             }
 
             .total-pagar {
-                width: 50vw;
-                min-width: 600px;
+                width: 100%;
+                min-width: 560px;
             }
 
             .formulario-pago {
@@ -405,12 +445,12 @@
                     </div>
                 </div>
             </div>
+            <div class="total-pagar">
+                <h2>Total a pagar</h2>
+                <p>$172.000</p>
+            </div>
         </div>
 
-        <div class="total-pagar">
-            <h2>Total a pagar</h2>
-            <p>$172.000</p>
-        </div>
 
         <!-- formulario de datos de envio -->
         <div class="formulario-pago">
